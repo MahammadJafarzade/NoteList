@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "464187653591",
+    "project_id": "noteappauthentication-f299c",
+    "storage_bucket": "noteappauthentication-f299c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464187653591:android:2a3f24ca20c4f8af7adf92",
+        "android_client_info": {
+          "package_name": "com.mahammadjafarzade.authenticationfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBadFtrHA-_MmKTGAc5ho8UHOILlBbF9nk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

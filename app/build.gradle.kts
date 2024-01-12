@@ -7,6 +7,8 @@ plugins {
 
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs.kotlin")
+
+    id("com.google.gms.google-services")
 }
 android {
     namespace = "com.mahammadjafarzade.authenticationfirebase"
@@ -46,6 +48,9 @@ android {
 }
 
 dependencies {
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
+
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1") // Kotlin Annotation Processing Tool
