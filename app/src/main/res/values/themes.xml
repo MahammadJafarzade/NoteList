@@ -1,9 +1,36 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.AuthenticationFirebase" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.NoteApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.AuthenticationFirebase" parent="Base.Theme.AuthenticationFirebase" />
+    <style name="Theme.NoteApp" parent="Base.Theme.NoteApp" >
+        <item name="bottomSheetDialogTheme">@style/BottomSheeDialogStyle</item>
+    </style>
+
+    <style name="BottomSheeDialogStyle" parent="Theme.Material3.Light.BottomSheetDialog">
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="ElevatedButtonStyle" parent="Widget.Material3.Button.ElevatedButton">
+        <!-- Düğme rengi -->
+        <item name="backgroundTint">@color/colorBlue</item>
+
+        <!-- Metin rengi -->
+        <item name="android:textColor">#FFFFFF</item>
+
+        <!-- Yükseltme efekti rengi -->
+        <item name="elevationOverlayColor">@color/colorButtonPressed</item>
+
+        <!-- Diğer özellikler -->
+        <!-- <item name="android:padding">...</item> -->
+        <!-- <item name="android:layout_width">...</item> -->
+        <!-- <item name="android:layout_height">...</item> -->
+    </style>
 </resources>
