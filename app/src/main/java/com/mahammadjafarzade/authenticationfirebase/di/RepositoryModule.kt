@@ -1,5 +1,6 @@
 package com.mahammadjafarzade.authenticationfirebase.di
 
+import com.mahammadjafarzade.authenticationfirebase.repository.NoteRepositoryInterface
 import com.mahammadjafarzade.authenticationfirebase.repository.NotesRepository
 import dagger.Binds
 import dagger.Module
@@ -12,5 +13,5 @@ import javax.inject.Singleton
 abstract class RepositoryModule {
     @Binds
     @Singleton
-    abstract fun bindNoteRepository(im : NotesRepository) : NotesRepository
+    abstract fun bindNoteRepository(im : NotesRepository) : NoteRepositoryInterface
 }

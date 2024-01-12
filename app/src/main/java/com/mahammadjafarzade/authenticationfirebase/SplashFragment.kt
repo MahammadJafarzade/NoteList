@@ -9,7 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.mahammadjafarzade.authenticationfirebase.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 
 class SplashFragment : Fragment() {
 
@@ -25,11 +27,12 @@ class SplashFragment : Fragment() {
     ): View? {
         binding = FragmentSplashBinding.inflate(inflater)
         // Inflate the layout for this fragment
+playLattie()
         return (binding.root)
     }
 
     private fun playLattie(){
-        binding.animationView.repeatCount = 1
+        binding.animationView.repeatCount = 0
         binding.animationView.playAnimation()
         binding.animationView.addAnimatorListener(object : AnimatorListener{
             override fun onAnimationStart(animation: Animator) {

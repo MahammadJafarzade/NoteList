@@ -11,7 +11,9 @@ import com.google.firebase.auth.auth
 import com.mahammadjafarzade.authenticationfirebase.R
 import com.mahammadjafarzade.authenticationfirebase.databinding.FragmentRegisterBinding
 import com.mahammadjafarzade.authenticationfirebase.util.showMessage
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RegisterFragment : Fragment() {
     lateinit var binding : FragmentRegisterBinding
     override fun onCreate(savedInstanceState: Bundle?) {

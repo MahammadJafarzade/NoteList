@@ -16,7 +16,9 @@ import com.mahammadjafarzade.authenticationfirebase.databinding.FragmentLoginBin
 import com.mahammadjafarzade.authenticationfirebase.databinding.FragmentRegisterBinding
 import com.mahammadjafarzade.authenticationfirebase.util.FirebaseMessageHandler
 import com.mahammadjafarzade.authenticationfirebase.util.showMessage
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 
 class LoginFragment : Fragment() {
     lateinit var binding : FragmentLoginBinding
