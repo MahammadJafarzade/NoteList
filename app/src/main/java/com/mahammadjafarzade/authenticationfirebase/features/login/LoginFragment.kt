@@ -11,6 +11,7 @@ import com.google.firebase.FirebaseError
 import com.google.firebase.auth.FirebaseAuthActionCodeException
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.auth
+import com.google.firebase.auth.FirebaseAuth
 import com.mahammadjafarzade.authenticationfirebase.R
 import com.mahammadjafarzade.authenticationfirebase.databinding.FragmentLoginBinding
 import com.mahammadjafarzade.authenticationfirebase.databinding.FragmentRegisterBinding
@@ -32,18 +33,20 @@ class LoginFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentLoginBinding.inflate(inflater)
-        return (binding.root)
-
         binding.loginButton.setOnClickListener{
             login()
         }
         binding.registerButton.setOnClickListener{
+
             openRegisterPage()
         }
+        return (binding.root)
+
+
     }
     fun login(){
         val firebaseAuth = Firebase.auth
-        firebaseAuth.createUserWithEmailAndPassword(
+        firebaseAuth.signInWithEmailAndPassword(
             binding.usernameEditText.text.toString(),
             binding.passwordEditText.text.toString()
         ).addOnSuccessListener {

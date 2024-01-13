@@ -61,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/addNoteFragment"
-        android:name="com.mahammadjafarzade.authenticationfirebase.features.newnote.AddNoteFragment"
+        android:name="com.mahammadjafarzade.authenticationfirebase.features.newnote.AddNewNoteFragment"
         android:label="fragment_add_note"
         tools:layout="@layout/fragment_add_note" />
 </navigation>

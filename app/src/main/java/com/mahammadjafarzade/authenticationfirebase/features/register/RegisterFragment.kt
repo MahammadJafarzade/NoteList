@@ -26,11 +26,12 @@ class RegisterFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentRegisterBinding.inflate(inflater)
-        return (binding.root)
 
         binding.registerButton.setOnClickListener{
             register()
         }
+        return (binding.root)
+
     }
     fun register(){
         val firebaseAuth = Firebase.auth
@@ -40,6 +41,7 @@ class RegisterFragment : Fragment() {
         ).addOnSuccessListener {
             findNavController().popBackStack()
         }.addOnFailureListener{
+            println(it)
            // showMessage("hata")
         }
     }

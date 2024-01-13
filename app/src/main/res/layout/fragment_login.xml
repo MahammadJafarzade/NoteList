@@ -104,7 +104,7 @@
 
 
             <Button
-                android:id="@+id/login_button"
+                android:id="@+id/login_buttonfb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
