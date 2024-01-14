@@ -90,12 +90,12 @@
                 android:id="@+id/noteDateText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/icon_down"
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:imeOptions="actionNext"
-                android:drawableEnd="@drawable/icon_down"
-                android:text="@{viewModel.noteDateText}"
-                android:onClick="@{()->viewModel.onShowDatePicker()}"/>
+                android:onClick="@{()->viewModel.onShowDatePicker()}"
+                android:text="@{viewModel.noteDateText}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
