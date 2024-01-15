@@ -24,16 +24,47 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs{
+        getByName("debug") {
+            storeFile =
+                file("C:\\Users\\Orkhan\\AndroidStudioProjects\\AuthenticationFirebase\\certificates\\DebugNoteListKeyStore.jks")
+            storePassword = "123123"
+            keyAlias = "key0"
+            keyPassword = "123123"
+        }
+        create("release"){
+            keyAlias = "key0"
+            keyPassword = "123123"
+            storeFile =
+                file("../certificates/NoteListReleaseKeyStore.jks")
+            storePassword = "123123"
+        }
+        create("dev"){
+            keyAlias = "key0"
+            keyPassword = "123123"
+            storeFile = file("../certificates/DebugNoteListKeyStore.jks")
+            storePassword = "123123"
+        }
+    }
     buildTypes {
         release {
-            isMinifyEnabled = false
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
+        }
+        debug {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+            signingConfig = signingConfigs.getByName("dev")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -48,6 +79,10 @@ android {
 }
 
 dependencies {
+    implementation("com.facebook.android:facebook-login:latest.release")
+    implementation("com.facebook.android:facebook-android-sdk:15.1.0")
+
+
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.google.firebase:firebase-analytics")
 

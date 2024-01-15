@@ -8,88 +8,90 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+
+
+
         <TextView
-            android:id="@+id/titleTextView"
-            android:layout_width="wrap_content"
+            android:id="@+id/loginTitle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Giriş Yap"
-            android:textSize="24sp"
-            android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="50dp"/>
-
+            android:gravity="center"
+            android:textSize="25dp"
+            android:layout_marginTop="50dp"
+            android:text="Login"/>
         <TextView
             android:id="@+id/subtitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hoş geldiniz! Lütfen giriş yapın."
             android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@id/loginTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="10dp"/>
-
         <EditText
             android:id="@+id/usernameEditText"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Kullanıcı Adı"
-            app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/loginTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:padding="10dp"/>
-
+            android:hint="Email"
+            android:layout_margin="20dp"
+            android:paddingTop="15dp"
+            />
         <EditText
             android:id="@+id/passwordEditText"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Şifre"
-            app:layout_constraintTop_toBottomOf="@id/usernameEditText"
+            app:layout_constraintTop_toBottomOf="@+id/usernameEditText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:inputType="textPassword"
-            android:padding="10dp"/>
+            android:layout_margin="20dp"
+            android:paddingTop="15dp"
+            android:hint="Password"
+            />
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Forgot Password?>"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.925"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+
 
         <Button
             android:id="@+id/loginButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Giriş Yap"
-            app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+            android:textColor="@color/white"
+            android:layout_margin="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/forgotPassword"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:background="@android:color/holo_orange_light"
-            android:textColor="@android:color/white"
-            android:padding="10dp"/>
+            android:layout_marginTop="10dp"
+            android:text="Join"/>
 
         <Button
             android:id="@+id/registerButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Kayıt Ol"
+            android:text="Register"
             app:layout_constraintTop_toBottomOf="@id/loginButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="10dp"
-            android:background="@android:color/holo_orange_light"
+            android:layout_margin="15dp"
             android:textColor="@android:color/white"
             android:padding="10dp"/>
-
-        <TextView
-            android:id="@+id/forgotPasswordTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Şifremi Unuttum"
-            app:layout_constraintTop_toBottomOf="@id/registerButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/holo_orange_light"/>
 
         <LinearLayout
             android:id="@+id/socialLoginLayout"
@@ -97,7 +99,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@id/forgotPasswordTextView"
+            app:layout_constraintTop_toBottomOf="@id/registerButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="20dp">
@@ -110,9 +112,17 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
+                android:layout_margin="15dp"
                 android:text="Login With Facebook"/>
+            <Button
+                android:id="@+id/login_buttonGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="Login With Google"/>
 
         </LinearLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
