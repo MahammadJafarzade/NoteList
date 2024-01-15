@@ -5,6 +5,7 @@
     <string name="btn_save_title">Not Ekle</string>
     <string name="error_login_title">Giriş yapılamadı!</string>
     <string name="error_login_detail">Lütfen bilgileri kontrol edin.</string>
+    <string name="next_page">Next</string>
 
 
     <string name="facebook_app_id">911390026852402</string>

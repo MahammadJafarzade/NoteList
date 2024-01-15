@@ -22,7 +22,11 @@
         android:id="@+id/introFragment"
         android:name="com.mahammadjafarzade.authenticationfirebase.IntroFragment"
         android:label="fragment_intro"
-        tools:layout="@layout/fragment_intro" />
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_introFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.mahammadjafarzade.authenticationfirebase.features.login.LoginFragment"
@@ -46,7 +50,7 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.mahammadjafarzade.authenticationfirebase.SplashFragment"
+        android:name="com.mahammadjafarzade.authenticationfirebase.features.splash.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash" >
         <action
