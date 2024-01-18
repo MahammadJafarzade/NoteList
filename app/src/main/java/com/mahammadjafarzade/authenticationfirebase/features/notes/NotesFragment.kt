@@ -46,7 +46,6 @@ class NotesFragment : Fragment() {
     private fun observeLiveData() {
         viewModel.getAllData().observe(viewLifecycleOwner) {
             noteListAdapter.setList(it)
-            //noteTagAdapter.setList(it)
         }
     }
 

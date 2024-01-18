@@ -14,5 +14,5 @@ import javax.inject.Singleton
 abstract class PreferencesModule {
     @Binds
     @Singleton
-    abstract fun bindPreferences(pref:MySharedPreferences): MySharedPreferencesInterface
+    abstract fun bindPreferences(pref : MySharedPreferences) : MySharedPreferencesInterface
 }

@@ -6,6 +6,8 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.firestore
 import dagger.hilt.android.AndroidEntryPoint
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
@@ -15,6 +17,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+//        val db = Firebase.firestore
+//        var note = hashMapOf(
+//            "name" to "123123",
+//            "title" to "2313123",
+//            "detail" to "4865wad")
+//        db.collection("Note")
+//            .add(note)
+//            .addOnSuccessListener {
+//
+//            }
+//            .addOnFailureListener{
+//
+//            }
 //        printHashKey(baseContext)
     }
 

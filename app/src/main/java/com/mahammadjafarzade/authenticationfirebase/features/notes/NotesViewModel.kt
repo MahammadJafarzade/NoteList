@@ -13,6 +13,7 @@ class NotesViewModel @Inject constructor(
     private val repository: NotesRepository,
     val resourceRepository: ResourceRepository) : ViewModel() {
 
+
     fun getAllData() : LiveData<List<NoteEntity>> {
         return repository.getAll()
     }
